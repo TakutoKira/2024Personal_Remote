@@ -2,9 +2,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>PersonalTraining</title>
 </head>
-<body>
-	こんにちは
+<body onload="start()">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+	
+	<div>
+		
+	</div>
+	
+	<script>
+		function start(){
+			const key = "null";
+			const url = "localhost://8080/api";
+		}
+		
+		$.ajax(url).done(function(obj){
+			const txt = Json.stringify(obj,null,' ');
+			document.write(txt);
+			
+		})
+	</script>
 </body>
 </html>
