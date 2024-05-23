@@ -2,7 +2,8 @@ body{
   background-image: url("./Space.jpg");
 }
 
-/* .box{
-  display:flex;
-  justify-content: center;
-} */
+.box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

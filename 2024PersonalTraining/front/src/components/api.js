@@ -14,10 +14,16 @@ function Api() {
 		});
 	}, []);
 	return (
+
+		  		
 		<p className="box">
 			{planets.map((planet,index) => 
 
-			<PlanetImage planetName={planet.name} distance={planet.distance}   style={{ margin: '{planet.distance * 100}px' }}></PlanetImage>
+			<PlanetImage key={index} planetName={planet.name} distance={planet.distance}   
+			styles={{ marginBottom: `${parseInt(planet.distance)*100}px`, padding: '16px',color: 'white',}}
+			>
+
+			</PlanetImage>
 
 			)}
 		</p>

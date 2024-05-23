@@ -2,11 +2,12 @@
 import React, { useEffect, useState } from 'react';
 
 function PlanetImage({planetName,distance}) {
-	const styles= {
-		padding: '16px',
-		color: 'white',
-	  };
 	const imagePath = `${process.env.PUBLIC_URL}/${planetName}.png`;
+	const styles ={ 
+		marginTop: `${parseInt(distance)*200}px`, 
+		padding: '16px',
+		color: 'white'
+	}
 	return (
 		<div style={styles}>
 			<img src={imagePath}></img>
