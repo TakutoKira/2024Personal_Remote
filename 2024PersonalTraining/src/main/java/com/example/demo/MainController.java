@@ -1,19 +1,18 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @CrossOrigin(origins = "*")
 public class MainController {
-	@GetMapping("/api")
+	PlanetRepository planet;
+
+	@GetMapping("/")
 	@ResponseBody
-	public PlanetData getPlanet() {
-		PlanetData planet = new PlanetData();
-		planet.setName("name");
-		planet.setDistance(0);
-		return planet;
+	public String getIndex() {
+		return "index.html";
 	}
 }
